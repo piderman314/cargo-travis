@@ -49,7 +49,6 @@ pub fn run_coverage(ws: &Workspace, options: &CoverageOptions, test_args: &[Stri
         let default_include_path = format!("--include-path={}", ws.root().display());
 
         let mut args = vec![
-            OsString::from("--configure=coveralls-service-name=travis-pro"),
             OsString::from("--verify"),
             OsString::from(default_include_path), 
             OsString::from(target)];

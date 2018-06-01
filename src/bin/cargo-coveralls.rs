@@ -139,7 +139,7 @@ fn execute(options: Options, config: &Config) -> CliResult {
 
     let ops = CoverageOptions {
         merge_dir: Path::new("target/kcov"),
-        merge_args: vec!["--coveralls-id".into(), job_id],
+        merge_args: vec!["--coveralls-id".into(), job_id, "--configure".into(), "coveralls-service-name=travis-pro".into()],
         no_fail_fast: options.flag_no_fail_fast,
         exclude_pattern: options.flag_exclude_pattern,
         kcov_path: &kcov_path,
